@@ -1,2 +1,37 @@
-<p>Hello </p>
-<p>This is my personal site</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Model Demo</title>
+</head>
+<body>
+    <h1>AI Model Demo</h1>
+    <form id="modelForm">
+        <label for="inputData">Enter Data:</label><br>
+        <input type="text" id="inputData" name="inputData"><br>
+        <input type="submit" value="Submit">
+    </form>
+    <p id="response"></p>
+
+    <script>
+        document.getElementById('modelForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const inputData = document.getElementById('inputData').value;
+            fetch('/run-model', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ inputData: inputData }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('response').textContent = 'Model Output: ' + data.output;
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
+</body>
+</html>
