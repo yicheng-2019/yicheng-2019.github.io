@@ -24,7 +24,7 @@ author:
   avatar           : "profile.png"
   name             : "Qiu Yicheng(仇禕誠)"
   pronouns         : # example: "she/her"  
-  bio              : "Master：Tokyo Metropolitan University，   working：Nanhulab."
+  bio              : "My Master's degree is from Tokyo Metropolitan University, now I'm working as an Assistant Researcher at Nanhulab."
   location         : "JiaXing China"
   employer         : "Nanhu Laboratory"
   uri              : # URL
@@ -36,7 +36,7 @@ author:
   impactstory      : # URL
   orcid            : "http://orcid.org/yourorcidurl"
   semantic         : # URL
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   researchgate     : # URL
 
   # Repositories and software development
